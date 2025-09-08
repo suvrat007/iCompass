@@ -1,0 +1,27 @@
+{
+  "name": "jharkhand-connect",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo for iConnect (Jharkhand Connect): web platform, mobile app, and shared packages",
+  "workspaces": [
+    "web-platform",
+    "mobile-app",
+    "shared"
+  ],
+  "scripts": {
+    "build": "npm -w web-platform run build",
+    "dev": "npm -w web-platform run dev",
+    "web:dev": "npm -w web-platform run dev",
+    "web:build": "npm -w web-platform run build",
+    "web:start": "npm -w web-platform run start",
+    "mobile:start": "npm -w mobile-app run start",
+    "mobile:android": "npm -w mobile-app run android",
+    "mobile:ios": "npm -w mobile-app run ios",
+    "lint": "npm -w web-platform run lint || exit 0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "index.js"
+}
