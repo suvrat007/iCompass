@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Suspense } from "react";
 
 const nav = [
   { href: "/", label: "Home" },
@@ -13,7 +14,7 @@ const nav = [
   { href: "/contact", label: "Contact" },
 ];
 
-export default function Header() {
+function HeaderContent() {
   const pathname = usePathname();
   return (
     <header className="sticky top-0 z-40 backdrop-blur bg-emerald-950/60 border-b border-emerald-800">
@@ -35,6 +36,14 @@ export default function Header() {
         </div>
       </div>
     </header>
+  );
+}
+
+export default function Header() {
+  return (
+    <Suspense fallback={<div className="sticky top-0 z-40 backdrop-blur bg-emerald-950/60 border-b border-emerald-800 h-14"></div>}>
+      <HeaderContent />
+    </Suspense>
   );
 }
 

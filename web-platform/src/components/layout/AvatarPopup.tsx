@@ -1,8 +1,9 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
+import { Suspense } from "react";
 
-export default function AvatarPopup({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+function AvatarPopupContent({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const router = useRouter();
   return (
     <AnimatePresence>
@@ -32,6 +33,14 @@ export default function AvatarPopup({ isOpen, onClose }: { isOpen: boolean; onCl
         </div>
       )}
     </AnimatePresence>
+  );
+}
+
+export default function AvatarPopup({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+  return (
+    <Suspense fallback={null}>
+      <AvatarPopupContent isOpen={isOpen} onClose={onClose} />
+    </Suspense>
   );
 }
 

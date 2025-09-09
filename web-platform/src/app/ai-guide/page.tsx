@@ -1,10 +1,10 @@
 "use client";
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
-export default function AIGuidePage() {
+function AIGuideContent() {
   const params = useSearchParams();
-  const mode = params.get("mode");
+  const mode = params?.get("mode");
   const [messages, setMessages] = useState<{ role: "user" | "assistant"; content: string }[]>([]);
   const [input, setInput] = useState("");
   const [voice, setVoice] = useState(false);
@@ -55,6 +55,14 @@ export default function AIGuidePage() {
         <button onClick={send} className="px-4 py-2 rounded bg-emerald-600">Send</button>
       </div>
     </main>
+  );
+}
+
+export default function AIGuidePage() {
+  return (
+    <Suspense fallback={<div className="max-w-3xl mx-auto px-6 py-12">Loading...</div>}>
+      <AIGuideContent />
+    </Suspense>
   );
 }
 

@@ -1,5 +1,14 @@
 interface Params { params: { slug: string } }
 
+export async function generateStaticParams() {
+  return [
+    { slug: 'netarhat-hills' },
+    { slug: 'hundru-falls' },
+    { slug: 'betla-national-park' },
+    { slug: 'deoghar-temple' },
+  ];
+}
+
 export default function DestinationPage({ params }: Params) {
   const { slug } = params;
   return (
