@@ -15,6 +15,14 @@ const nextConfig = {
         hostname: 'plus.unsplash.com',
       },
     ],
+    formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 60,
+  },
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: true,
+  experimental: {
+    optimizeCss: true,
   },
 };
 
