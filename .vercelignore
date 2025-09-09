@@ -1,0 +1,11 @@
+mobile-app
+shared
+tests
+docs
+deployment
+node_modules
+.git
+.gitignore
+README.md
+*.log
+.DS_Store
