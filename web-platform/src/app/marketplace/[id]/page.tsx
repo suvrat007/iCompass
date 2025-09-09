@@ -1,5 +1,12 @@
 interface Params { params: { id: string } }
 
+export async function generateStaticParams() {
+  return [
+    { id: '1' },
+    { id: '2' },
+  ];
+}
+
 export default function ProductPage({ params }: Params) {
   const { id } = params;
   return (
