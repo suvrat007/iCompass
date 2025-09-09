@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Spline from '@splinetool/react-spline/next';
 
 export default function Hero() {
   return (
@@ -21,12 +22,10 @@ export default function Hero() {
             <a href="#destinations" className="px-6 py-3 rounded-md border border-emerald-700 hover:bg-emerald-900/40 transition">Start AR Experience</a>
           </div>
         </motion.div>
-        <motion.div initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9 }} className="relative h-80 md:h-[28rem] rounded-xl border border-emerald-800 bg-gradient-to-b from-emerald-900/30 to-black overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(245,158,11,0.18),transparent_40%)]" />
-          <div className="absolute right-6 top-6 h-20 w-20 rounded-full overflow-hidden border border-amber-300/30 shadow-[0_0_80px_rgba(251,191,36,0.25)]">
-            <Image src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=320&auto=format&fit=crop" alt="Birsa AI" width={80} height={80} className="h-full w-full object-cover" />
-          </div>
-          <div className="absolute left-6 bottom-6 text-2xl font-semibold text-amber-300">● ● ●   Live Map Pins</div>
+        <motion.div initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9 }} className="relative h-80 md:h-[28rem] rounded-xl border border-emerald-800 overflow-hidden">
+          <Spline
+            scene="https://prod.spline.design/K3fcfHFiHsgl1gJJ/scene.splinecode" 
+          />
         </motion.div>
       </div>
     </section>
