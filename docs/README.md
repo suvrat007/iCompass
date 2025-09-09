@@ -26,3 +26,16 @@ Then open http://localhost:3000.
 
 ## License
 MIT
+
+## Asset Attributions
+Remote images are used for prototyping purposes under Unsplash license:
+- Hero avatar: Unsplash (photographer unknown via API crop)
+- Floating avatar: Unsplash (portrait stock)
+- Destination images:
+  - Netarhat Hills (mountain sunrise) — Unsplash
+  - Hundru Falls (waterfall) — Unsplash
+  - Betla National Park (forest/wildlife ambiance) — Unsplash
+  - Deoghar Temple (temple architecture) — Unsplash
+- Gallery images: Unsplash curated set
+
+Replace with owned/credited assets before production.

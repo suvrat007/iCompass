@@ -18,7 +18,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 backdrop-blur bg-emerald-950/60 border-b border-emerald-800">
       <div className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
-        <Link href="/" className="font-bold tracking-wide">Jharkhand Connect</Link>
+        <Link href="/" className="font-bold tracking-wide">iConnect</Link>
         <nav className="hidden md:flex gap-4">
           {nav.map((item) => (
             <Link
@@ -30,6 +30,9 @@ export default function Header() {
             </Link>
           ))}
         </nav>
+        <div className="hidden md:flex">
+          <Link href="/marketplace" className="px-4 py-2 rounded-md bg-amber-500 text-black font-semibold hover:bg-amber-400 transition text-sm">Get Started</Link>
+        </div>
       </div>
     </header>
   );

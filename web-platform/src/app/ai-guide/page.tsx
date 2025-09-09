@@ -1,7 +1,10 @@
 "use client";
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 export default function AIGuidePage() {
+  const params = useSearchParams();
+  const mode = params.get("mode");
   const [messages, setMessages] = useState<{ role: "user" | "assistant"; content: string }[]>([]);
   const [input, setInput] = useState("");
   const [voice, setVoice] = useState(false);
@@ -22,10 +25,19 @@ export default function AIGuidePage() {
 
   return (
     <main className="max-w-3xl mx-auto px-6 py-12">
+      <div className="rounded-xl overflow-hidden border border-emerald-800 mb-8 bg-black/50">
+        <div className="h-64 flex items-center justify-center bg-gradient-to-br from-emerald-900/30 to-black">
+          <div className="text-center">
+            <div className="h-20 w-20 mx-auto rounded-full bg-gradient-to-tr from-amber-500/30 to-emerald-400/20 border border-amber-300/30 shadow-[0_0_80px_rgba(251,191,36,0.25)] mb-4" />
+            <h2 className="text-xl font-semibold text-amber-300">Birsa AI Avatar</h2>
+            <p className="text-sm text-emerald-300">3D Interactive Guide</p>
+          </div>
+        </div>
+      </div>
       <h1 className="text-3xl font-bold">AI Guide (Birsa)</h1>
       <div className="mt-4 flex items-center gap-2 text-sm">
         <label className="flex items-center gap-2">
-          <input type="checkbox" checked={voice} onChange={(e) => setVoice(e.target.checked)} /> Voice
+          <input type="checkbox" checked={voice || mode === "voice"} onChange={(e) => setVoice(e.target.checked)} /> Voice
         </label>
       </div>
       <div className="mt-6 h-[50vh] border border-emerald-800 rounded p-4 overflow-y-auto bg-emerald-950/40">

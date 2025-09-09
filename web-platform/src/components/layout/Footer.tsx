@@ -32,7 +32,7 @@ export default function Footer() {
             <p>Get cultural updates and experiences.</p>
           </div>
         </div>
-        <div className="mt-8 text-xs text-emerald-400">© {new Date().getFullYear()} Jharkhand Connect</div>
+        <div className="mt-8 text-xs text-emerald-400">© {new Date().getFullYear()} iConnect</div>
       </div>
     </footer>
   );
