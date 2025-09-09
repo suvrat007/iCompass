@@ -9,7 +9,7 @@
     "shared"
   ],
   "scripts": {
-    "build": "npm -w web-platform run build",
+    "build": "cd web-platform && npm install && npm run build",
     "dev": "npm -w web-platform run dev",
     "web:dev": "npm -w web-platform run dev",
     "web:build": "npm -w web-platform run build",
@@ -17,7 +17,8 @@
     "mobile:start": "npm -w mobile-app run start",
     "mobile:android": "npm -w mobile-app run android",
     "mobile:ios": "npm -w mobile-app run ios",
-    "lint": "npm -w web-platform run lint || exit 0"
+    "lint": "npm -w web-platform run lint || exit 0",
+    "vercel-build": "cd web-platform && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
