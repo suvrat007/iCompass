@@ -4,6 +4,9 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  typescript: {
+    ignoreBuildErrors: false,
+  },
   images: {
     remotePatterns: [
       {
@@ -17,13 +20,13 @@ const nextConfig = {
     ],
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
+    unoptimized: false,
   },
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
-  experimental: {
-    optimizeCss: true,
-  },
+  trailingSlash: false,
+  output: 'standalone',
 };
 
 export default nextConfig;
