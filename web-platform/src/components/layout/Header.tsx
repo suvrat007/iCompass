@@ -19,7 +19,7 @@ function HeaderContent() {
   return (
     <header className="sticky top-0 z-40 backdrop-blur bg-emerald-950/60 border-b border-emerald-800">
       <div className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
-        <Link href="/" className="font-bold tracking-wide">iConnect</Link>
+        <Link href="/" className="font-bold tracking-wide">iCompass</Link>
         <nav className="hidden md:flex gap-4">
           {nav.map((item) => (
             <Link
