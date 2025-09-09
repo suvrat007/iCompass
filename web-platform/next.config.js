@@ -41,6 +41,27 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
+  webpack: (config, { isServer }) => {
+    // Handle Spline for Vercel deployment
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        net: false,
+        tls: false,
+      };
+    }
+    
+    // Handle Spline canvas and WebGL
+    config.module.rules.push({
+      test: /\.(glsl|vs|fs|vert|frag)$/,
+      use: ['raw-loader', 'glslify-loader'],
+    });
+
+    return config;
+  },
+  // Handle Spline external dependencies
+  transpilePackages: ['@splinetool/react-spline'],
 };
 
 export default nextConfig;

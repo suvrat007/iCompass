@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Spline from '@splinetool/react-spline/next';
+import SplineWrapper from "../SplineWrapper";
 
 export default function Hero() {
   return (
@@ -23,8 +23,9 @@ export default function Hero() {
           </div>
         </motion.div>
         <motion.div initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9 }} className="relative h-80 md:h-[28rem] rounded-xl border border-emerald-800 overflow-hidden">
-          <Spline
-            scene="https://prod.spline.design/K3fcfHFiHsgl1gJJ/scene.splinecode" 
+          <SplineWrapper
+            scene="https://prod.spline.design/K3fcfHFiHsgl1gJJ/scene.splinecode"
+            className="rounded-xl"
           />
         </motion.div>
       </div>
