@@ -18,13 +18,18 @@
     "mobile:android": "npm -w mobile-app run android",
     "mobile:ios": "npm -w mobile-app run ios",
     "lint": "npm -w web-platform run lint || exit 0",
-    "vercel-build": "cd web-platform && npm install && npm run build"
+    "vercel-build": "cd web-platform && npm install && npm run build",
+    "start": "cd web-platform && npm start"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["nextjs", "react", "typescript", "vercel"],
+  "author": "iCompass Team",
   "license": "MIT",
   "type": "commonjs",
   "main": "index.js",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
   "devDependencies": {
     "@types/node": "^24.3.1",
     "@types/react": "^19.1.12",

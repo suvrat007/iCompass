@@ -12,8 +12,21 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleDetection": "force"
   },
-  "include": [],
-  "exclude": ["node_modules", "web-platform/node_modules", "mobile-app/node_modules", "shared/node_modules"]
+  "include": [
+    "web-platform/src/**/*",
+    "web-platform/next-env.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "web-platform/node_modules",
+    "mobile-app",
+    "shared",
+    "tests",
+    "docs",
+    "deployment"
+  ]
 }
