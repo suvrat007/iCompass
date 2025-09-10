@@ -105,3 +105,4 @@ Your iCompass website is now Vercel-ready with:
 - SEO optimization
 - Modern UI preserved
 - All features working
+

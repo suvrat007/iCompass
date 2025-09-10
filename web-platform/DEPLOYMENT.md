@@ -76,3 +76,4 @@ All API routes in `/src/app/api/` are automatically deployed as serverless funct
 - Ensure all dependencies are in package.json
 - Verify image domains in next.config.js
 - Check environment variables are set correctly
+
