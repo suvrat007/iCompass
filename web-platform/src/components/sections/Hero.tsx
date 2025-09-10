@@ -23,11 +23,14 @@ export default function Hero() {
         </motion.div>
         <motion.div initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9 }} className="relative h-80 md:h-[28rem] rounded-xl border border-emerald-800 bg-gradient-to-b from-emerald-900/30 to-black overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(245,158,11,0.18),transparent_40%)]" />
-          <div className="absolute right-6 top-6 h-20 w-20 rounded-full overflow-hidden border border-amber-300/30 shadow-[0_0_80px_rgba(251,191,36,0.25)]">
-            <Image src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=320&auto=format&fit=crop" alt="Birsa AI" width={80} height={80} className="h-full w-full object-cover" />
-          </div>
-          <div className="absolute left-6 bottom-6 h-16 w-16 rounded-lg overflow-hidden border border-amber-300/30 shadow-[0_0_20px_rgba(251,191,36,0.25)]">
-            <Image src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=200&auto=format&fit=crop" alt="Tribal Art" width={64} height={64} className="h-full w-full object-cover" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <Image 
+              src="https://www.keralatourism.org/_next/image/?url=http%3A%2F%2F127.0.0.1%2Fktadmin%2Fimg%2Fpages%2Fmobile%2Fmannankoothu-kerala-tribal-artform-1728484747_ba47395706aa1f6b448e.webp&w=3840&q=75" 
+              alt="Kerala Tribal Artform - Mannankoothu" 
+              width={400} 
+              height={400} 
+              className="h-full w-full object-cover rounded-xl" 
+            />
           </div>
         </motion.div>
       </div>
